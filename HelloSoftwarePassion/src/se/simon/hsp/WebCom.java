@@ -3,6 +3,7 @@ package se.simon.hsp;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
@@ -11,8 +12,8 @@ import org.json.JSONObject;
 
 public class WebCom {
 	
-	public static List<String> getTalks() {
-		List<String> result = new ArrayList<String>();
+	public static List<Talk> getTalks() {
+		List<Talk> result = new ArrayList<Talk>();
 		try {
 			URL url = new URL("http://softwarepassion.se/api/slots");
 			URLConnection conn = url.openConnection();
@@ -30,8 +31,10 @@ public class WebCom {
 			JSONArray jsonArray = jsonObject.getJSONArray("slotList");
 			
 			for(int i = 0; i < jsonArray.length(); i++) {
-				result.add(jsonArray.getJSONObject(i).getJSONObject("session").getString("abstractTitle"));
+				result.add(new Talk(jsonArray.getJSONObject(i)));
 			}
+			
+			Collections.sort(result);
 			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<style name="listView">
+		<item name="android:cacheColorHint">#ffffff</item>
+	</style>
+
+	<style name="header">
+		<item name="android:padding">10dp</item>
+		<item name="android:textSize">20sp</item>
+		<item name="android:textColor">#333333</item>
+		<item name="android:text">Ten mistakes team leaders make</item>
+	</style>
+	
+	<style name="paragraph">
+		<item name="android:padding">10dp</item>
+		<item name="android:textSize">14sp</item>
+		<item name="android:textColor">#333333</item>
+		<item name="android:text">sany.</item>
+	</style>
+</resources>
