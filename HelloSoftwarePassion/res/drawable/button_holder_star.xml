@@ -1,9 +1,0 @@
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
-	<item android:drawable="@drawable/stjarna_20_gul"
-		android:state_pressed="true" />
-	<item android:drawable="@drawable/stjarna_20_gul"
-		android:state_selected="true" />
-	<item android:drawable="@drawable/stjarna_20_gul"
-		android:state_focused="true" />
-	<item android:drawable="@drawable/stjarna_20"/>
-</selector>
